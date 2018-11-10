@@ -22,8 +22,7 @@ class CommentsTab extends AbstractTab
         ProviderInterface $commentsRenderer,
         ContentService $contentService,
         RequestStack $requestStack
-    )
-    {
+    ) {
         $this->commentsRenderer = $commentsRenderer;
         $this->requestStack = $requestStack;
         $this->contentService = $contentService;
