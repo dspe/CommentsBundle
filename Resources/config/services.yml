@@ -7,7 +7,6 @@ parameters:
     ez_comments.provider.disqus.class: EzSystems\CommentsBundle\Comments\Provider\DisqusProvider
     ez_comments.provider.facebook.class: EzSystems\CommentsBundle\Comments\Provider\FacebookProvider
     ez_comments.controller.comments_renderer.class: EzSystems\CommentsBundle\Controller\CommentsRendererController
-    ez_comments.tab.class: EzSystems\CommentsBundle\Tab\CommentsTab
 
 services:
     ez_comments.renderer:
@@ -59,7 +58,7 @@ services:
         arguments: ['@ez_comments.renderer', '@ezpublish.api.service.content']
 
     ez_comments.comments.tab:
-        class: '%ez_comments.tab.class%'
+        class: EzSystems\CommentsBundle\Tab\CommentsTab
         parent: EzSystems\EzPlatformAdminUi\Tab\AbstractTab
         arguments: [ '@twig', '@translator', '@ez_comments.renderer', '@ezpublish.api.service.content' ]
         tags:
