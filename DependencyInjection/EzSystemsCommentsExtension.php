@@ -29,8 +29,6 @@ class EzSystemsCommentsExtension extends Extension
 
         if (class_exists("\\EzSystems\\CommentsBundle\\Tab\\CommentsTab")) {
             $loader->load('services_v2.yml');
-        } else {
-            echo ":("; die;
         }
 
         $processor = new ConfigurationProcessor($container, 'ez_comments');
