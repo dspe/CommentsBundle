@@ -1,0 +1,7 @@
+services:
+    ez_comments.comments.tab:
+        class: EzSystems\CommentsBundle\Tab\CommentsTab
+        parent: EzSystems\EzPlatformAdminUi\Tab\AbstractTab
+        arguments: [ '@twig', '@translator', '@ez_comments.renderer', '@ezpublish.api.service.content' ]
+        tags:
+            - { name: ezplatform.tab, group: 'location-view' }
