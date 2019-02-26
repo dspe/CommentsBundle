@@ -27,7 +27,7 @@ class EzSystemsCommentsExtension extends Extension
         $loader->load('services.yml');
         $loader->load('default_settings.yml');
 
-        if (class_exists('\\EzSystems\\CommentsBundle\\Tab\\CommentsTab')) {
+        if (class_exists('\\EzSystems\\EzPlatformAdminUi\\Tab\\AbstractTab')) {
             $loader->load('services_v2.yml');
         }
 
